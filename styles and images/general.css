@@ -14,7 +14,7 @@ body{
   font-size: 25px;
   padding-bottom:50px;
 }
-table img{
+.description img{
   width: 100px;
   margin-right: 20px;
 }
@@ -55,6 +55,17 @@ table img{
 
 .altTable{
   background-color: rgba(126, 126, 126, 0.7);
+}
+
+.sSocial{
+  background: none;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:40%;
+}
+.sSocial img{
+  width: 30px;
+  visibility: visible;
 }
 @media(max-width:650px){
 .description{

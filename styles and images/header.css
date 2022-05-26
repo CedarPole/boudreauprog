@@ -55,7 +55,7 @@
   color:white;
   font-size: 20px;
 }
-.header-picture{
+.header-picture a{
   font-size: 55px;
   color:white;
   font-family:sans-serif;
@@ -109,5 +109,4 @@
     background-position: -400px;
     transition: ease all 1s ;
   }
-  
 }
