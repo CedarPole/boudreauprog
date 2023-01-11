@@ -1,0 +1,813 @@
+[
+      {
+        "name": "Ace",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Aerith",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Agrias",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Alisaie",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Alphinaud",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Amidatelion",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Aphmau",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Aranea",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Arciela",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Ardyn",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Ash",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Auron",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Balthier",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Barret",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Bartz",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Basch",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Beatrix",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Braska",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Cait Sith",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Caius",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Cater",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Cecil (DK)",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Ceceil (PL)",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Celes",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Ceodore",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Ciaran",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Cid",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Cinque",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Cissnei",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Cloud",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Cloud of Darkness",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Cor",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Cyan",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Desch",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Deuce",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Dorgann",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Eal'narche",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Edgar",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Edge",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Edward",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Eight",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Eiko",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Enna Kros",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Exdeath",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Fang",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Faris",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Firion",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Fran",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Freya",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Fujin",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Gabranth",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Galuf",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Garland",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Garnet",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Gau",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Gilgamesh",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Gladiolus",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Golbez",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Guy",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Hope",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Ignis",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Iroha",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Irvine",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Jack",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Jack Garland",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Jecht",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Jegran",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Kadaj",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Kain",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Kam'lanaut",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Kefka",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Keiss",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Kimahri",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "King",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Krile",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Kuja",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Kurasame",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Laguna",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Lann & Reynn",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Layle",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Leila",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Lenna",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Leo",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Leon",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Lightning",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Lilisette",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Lion",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Llyud",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Locke",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Lulu",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "LunaFreya",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Lyse",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Machina",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Maria",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Minwu",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Mog",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Nine",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Noctis",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Noel",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Onion Knight",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Paine",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Palom",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Papalymo",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Penelo",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Porom",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Prishe",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Prompto",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Queen",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Quistis",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Raijin",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Raines",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Ramza",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Relm",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Rem",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Reno",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Rinoa",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Rosa",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Rude",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Rydia",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Sabin",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Sazh",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Seifer",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Selphie",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Sephiroth",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Serah",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Setzer",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Seven",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Seymour",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Shadow",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Shantotto",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Shelke",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Sherlotta",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Sice",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Snow",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Squall",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Steiner",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Strago",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Terra",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Thancred",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "The Emperor",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Tidus",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Tifa",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Trey",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Ultimecia",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Ursula",
+        "burst": false,
+        "force": true
+      },
+      {
+        "name": "Vaan",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Vanille",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Vayne",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Vincent",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Vivi",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Wakka",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Warrior of Light",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Xande",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Y'shtola",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Yang",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Yda",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Yuffie",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Yuna",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Yuri",
+        "burst": true,
+        "force": true
+      },
+      {
+        "name": "Zack",
+        "burst": true,
+        "force": false
+      },
+      {
+        "name": "Zell",
+        "burst": false,
+        "force": false
+      },
+      {
+        "name": "Zidane",
+        "burst": true,
+        "force": false
+      }
+    ]
+    

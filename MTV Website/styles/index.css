@@ -1,0 +1,227 @@
+:root
+{
+  --background: white;
+  --textcolor: black;
+  --maincolor: black;
+  --varcolor:blue;
+
+}
+
+
+body
+{
+  margin:0;
+  padding:0;
+  color:var(--textcolor);
+  font-size: 1em;
+}
+/* Header */
+#mtvLogo{
+  width: 100%;
+}
+.nav
+{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  background-color: var(--maincolor);
+  position: sticky;
+  top:0;
+  width: 100%;
+  height: 25px;
+}
+.nav a
+{
+  font-size: 1em;
+  text-decoration: none;
+  color:white;
+  vertical-align: middle;
+}
+.nav div:hover
+{
+  background:green;
+}
+
+/* This is the CSS for the slider*/
+
+.nav input{
+  color: var(--textcolor);
+  background-color: var(--maincolor);
+  border:none;
+  font-size: 3em;
+  height:0.2em;
+  width: 4.9em;
+  margin-top:0.8em;
+  margin-bottom:0.1em;
+
+  transition: ease-in 1s;
+  text-align: right;
+}
+.switch {
+  margin-top:2.5px;
+  position:relative;
+  width: 2.5em;
+  height: 1.2em;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgb(165,165,165);
+  transition: .4s;
+  border-radius: 2em;
+}
+
+.switch input{
+  display: none;
+}
+.slider::before{
+  position: absolute;
+  content: "";
+  height: 0.9em;
+  width: 0.9em;
+  left: 5px;
+  bottom:3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+input:checked + .slider
+{
+  background-color: rgb(56,100,161);
+}
+input:checked + .slider::before
+{
+  transform: translateX(15px);
+}
+/* This is the end of the slider*/
+.background
+{
+  background-color: var(--background);
+}
+.wrapper
+{
+  margin:10px;
+}
+
+.Participants
+{
+  text-align: center;
+}
+
+#mtvChallenge
+{
+  width: 100%;
+}
+.headers
+{
+  background: #888686;
+}
+.btnsubmit
+{
+  /*background-color: blue;*/
+  border-radius: 10px;
+  padding:4px;
+  margin-bottom:5px;
+  box-shadow: #888686 2px 2px 3px;
+}
+.btnsubmit:hover
+{
+  /*background-color: red;*/
+  color:white;
+}
+/* Tool Tip*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  }
+  .tooltip .tooltiptext , .tooltip .tooltiptexticon {
+    visibility: hidden;
+    width: 100px;
+    background-color: #888686;
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    border-radius: 6px;
+    border-bottom-left-radius:0;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top:-40px;
+    left:10px;
+    font-size: 1em;
+  }
+  .tooltip:hover .tooltiptext , .tooltip:hover .tooltiptexticon {
+    visibility: visible;
+    }
+  
+
+/* Footer */
+.Extra
+{
+  font-size: 0.8em;
+}
+
+.calendar
+{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+
+}
+.calendar a{
+  text-decoration: none;
+  vertical-align: bottom;
+  
+}
+.calendar img{
+  width: 50px;
+  margin:auto;
+}
+
+.week
+{
+  border:#888686 solid 1px;
+  font-size:0.5em;
+  text-align: center;
+}
+.week:nth-of-type(1) ,.week:nth-of-type(3)
+{
+  background-color: gray;
+}
+.day{
+  font-size: 0.9em;
+  color:#888686;
+  font-style: italic;
+  text-decoration: underline;
+}
+.contact
+{
+ font-size: 0.6em;
+ font-style: italic;
+ margin:5px 30px 0 30px;
+}
+.contact div:nth-of-type(2)
+{
+  margin-top:5px;
+}
+
+@media only screen and (min-width: 300px) {
+ 
+  .wrapper
+  {
+    margin:0 80px 0 80px;
+  }
+  .tooltip .tooltiptext , .tooltip .tooltiptexticon {
+    width: 200px;
+    font-size: 1.2em;
+    }
+  /* Footer */
+  .calendar img{width: 10em;}
+  .day{font-size: 1.2em;}
+  .contact{margin:auto;}
+}
+

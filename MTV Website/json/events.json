@@ -1,0 +1,36 @@
+{
+  "events" :[
+    {"name":"Ramuh Spiritus",
+    "banned Units":[
+      {"name":"Ashe"},
+      {"name":"Setzer"},
+      {"name":"Kimahri"},
+      {"name":"Laguna"},
+      {"name":"Agrias"},
+      {"name":"Rem"}
+      
+    ],
+    "month":"Febuary"},
+    {"name":"Sice LC",
+    "banned Units":[
+      
+    ]},
+    {"name":"Strago Heretics",
+    "banned Units":[
+      
+    ]},
+    {"name":"DET 13",
+    "banned Units":[
+      
+    ]},
+    {"name":"Kuja Intersecting Wills",
+    "banned Units":[
+      
+    ]},
+    {"name":"Jessie's Event",
+    "banned Units":[
+      
+    ]}
+    
+  ]
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+  <div><img id="mtvLogo" src="images/mtvLogo.png"></div>
+  <div class="nav">
+    <div><a href="#about">About</a></div>
+    <div><a href="#submit">Submit</a></div>
+    <div><a href="https://docs.google.com/spreadsheets/d/1-U9D5axX1rMZPLlmsUQS7pCm3iwKWdwKa4nppDm7gwc/edit#gid=705294912">Runs</a></div>
+    <div><a href="#extra">Extra</a></div>
+    <label class="switch"><input type="checkbox" onclick="switchmode()" /><span class="slider"></span></label>
+  </div>
+  <div class="background">
+  <div class="wrapper">
+  <div class="Participants"><div>Thank you for Participating!</div><div>Black Cloud, Blart, Goose</div>
+  <div><div id="about">What is the MTV Challenge?</div><div>Every month, Ayman and TreeVoid will challenge the players of DFFOO GL to a Dare to Defy like challenge!</div></div>
+  <div><img id="mtvChallenge" src="images/MTVChallengeJanuary.png"></div>
+  <div id="submit"><button class="btnsubmit"onclick="onClickEvent()">Submit your run now!</button></div>
+
+
+  <div class="headers" id="extra">DFFOO Ressources</div>
+  <div class="Extra">
+    <div>Character/Beginner Guides :<a href="https://www.tonberrytroupe.com/">The Tonberry Troupe</a></div>
+    <div>Event/Character Timeline : <a href="https://ffootip.com/forecast">Ffootip</a></div>
+    <div>FR Conditions : <a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1lFajAtUEJBVHJBNG1lQnc2ZnllUDI2WmhFQXxBQ3Jtc0tsdmJBWDVKMXpYU25qaG5LOFFKWkkyVUNMYVk5QXJxMkJmbTRWOExYbVZCWVJaOFBUdzB5d2pxcmVkS3hKeUtBUTd0NFdJLTBDZURTeHphenNtRGNvblZ0eHA3SzI3UkcxcW9yMDVPaHhkQ3VQMWh6SQ&q=https%3A%2F%2Fwww.dff.ooo%2F%3Fen%26v%3Dforce-time%26s%3D6%26o%3Da&v=pGWxeaxTuuw">DFFOO FR Chart</a></div>
+    <div>Account Tracker : <a href=" https://ootracker.com/characters">OOTracker</a></div>
+    <div>Dissidia Database</a></div>
+    <div>Call Finder : <a href="">Call Finder</a></div>
+  </div>
+  <div class="headers">DFFOO Shows</div>
+  <div class="calendar">
+      <div class="week tooltip"><div class="day">Monday</div><img  src="images/LifeStreamLogo.png"><div><a href="https://www.twitch.tv/lifestreamdffoo">The LifeStream</a></div><div class="tooltiptext">Join Raw Life, Bl'Artagnan, and Leafblade Mouse every Monday on twitch at 6:30PM CST as they talk about the ongoing events on the global side of the game. </div></div>
+      <div class="week tooltip"><div class="day">Tuesday</div><img  src="images/HCLogo.png"><a href="https://www.twitch.tv/thecrystalchronicles"></a><div><a href="https://www.twitch.tv/crossxiii">Historia Crux</a></div><div class="tooltiptext">Join Raw Life, Bl'Artagnan, and Leafblade Mouse every Monday on twitch at 7:30PM EST as they talk about the ongoing events on the global side of the game. </div></div>
+      <div class="week tooltip"><div class="day">Wednesday</div><img  src="images/EchoLogo.png"><div><a href="https://www.twitch.tv/thecrystalchronicles"></a><a href="https://www.youtube.com/@ScarElric1">Echoes from The Rift</a></div><div class="tooltiptext">Join TreeVoid and Multiracial Lion, as well as a diverse set of guest hosts as they talk about ongoing events on the JP side of the game. This show is every other week </div></div>
+      <div class="week tooltip"><div class="day">Thursday</div><img  src="images/TCC Logo.jpg"><div><a href="https://www.twitch.tv/thecrystalchronicles">TCC Podcast</a></div><div class="tooltiptext">Join Mark and Mino as they host YOUR ONLY DFFOO podcast on Thursday nights, at 8PM CST time</div></div>
+  </div> 
+  <div class="contact"><div>For any questions, please join the <a href="https://discord.gg/6mWaCDU3zj">TCC Discord</a> and message PoteauCedar#2142.</div><div>MTV and all associated with this website are not affiliated with Square Enix 
+    <br/>All Materials are the Property of Koei Tecmo Games & Square Enix Co., Ltd. 
+    <br/>All Rights Reserved</div></div>
+  
+</div>
+</div>
+</body>
+<script>
+
+  let theme = "light";
+
+  function onClickEvent()
+  {
+    window.location.href = "event.html";
+  }
+  function switchmode()
+  {
+    if(theme == "light")
+    {
+      theme = "dark"
+      document.documentElement.style.setProperty('--background','black');
+      document.documentElement.style.setProperty('--textcolor','white');
+      console.log("dark mode")
+    }
+    else
+    {
+      theme = "light"
+      document.documentElement.style.setProperty('--background','white');
+      document.documentElement.style.setProperty('--textcolor','black');      
+      console.log("light mode")
+    }
+  }
+</script>
