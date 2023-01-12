@@ -13,7 +13,7 @@ body
   margin:0;
   padding:0;
   color:var(--textcolor);
-  font-size: 1em;
+  font-size: 3em;
 }
 /* Header */
 #mtvLogo{
@@ -28,7 +28,11 @@ body
   position: sticky;
   top:0;
   width: 100%;
-  height: 25px;
+  height: 75px;
+}
+.nav label
+{
+  margin:auto;
 }
 .nav a
 {
@@ -174,7 +178,6 @@ input:checked + .slider::before
 }
 .calendar a{
   text-decoration: none;
-  vertical-align: bottom;
   
 }
 .calendar img{
