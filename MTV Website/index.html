@@ -4,18 +4,21 @@
 </head>
 <body>
   <div><img id="mtvLogo" src="images/mtvLogo.png"></div>
-  <div class="nav">
-    <div><a href="#about">About</a></div>
-    <div><a href="#submit">Submit</a></div>
-    <div><a href="https://docs.google.com/spreadsheets/d/1-U9D5axX1rMZPLlmsUQS7pCm3iwKWdwKa4nppDm7gwc/edit#gid=705294912">Runs</a></div>
-    <div><a href="#extra">Extra</a></div>
-    <label class="switch"><input type="checkbox" onclick="switchmode()" /><span class="slider"></span></label>
-  </div>
+    <div class="title">Man to Void Challenge Submissions!</div>
+      <div class="nav">
+        <div><a href="#about">About</a></div>
+        <div><a href="#submit">Submit</a></div>
+        <div><a href="https://docs.google.com/spreadsheets/d/1-U9D5axX1rMZPLlmsUQS7pCm3iwKWdwKa4nppDm7gwc/edit#gid=705294912">Runs</a></div>
+        <div><a href="#extra">Extra</a></div>
+        <label class="switch"><input type="checkbox" onclick="switchmode()" /><span class="slider"></span></label>
+    </div>
   <div class="background">
   <div class="wrapper">
-  <div class="Participants"><div>Thank you for Participating!</div><div>Black Cloud, Blart, Goose</div>
+    <div class="participants">
+      <div>Thank you for Participating!</div><div><a>Black Cloud,</a> <a>Blart,</a> <a>Goose</a>, Somegi</div></div>
   <div><div id="about">What is the MTV Challenge?</div><div>Every month, Ayman and TreeVoid will challenge the players of DFFOO GL to a Dare to Defy like challenge!</div></div>
-  <div><img id="mtvChallenge" src="images/MTVChallengeJanuary.png"></div>
+  <div class="headers">Current Challenge! <label id="lblmonth">January! 2023</label><img id="mtvChallenge" src="images/MTVChallengeJanuary.png"></div>
+  
   <div id="submit"><button class="btnsubmit"onclick="onClickEvent()">Submit your run now!</button></div>
 
 
@@ -28,7 +31,7 @@
     <div>Dissidia Database</a></div>
     <div>Call Finder : <a href="">Call Finder</a></div>
   </div>
-  <div class="headers">DFFOO Shows</div>
+  <div class="headers" style="margin-bottom:0;">DFFOO Shows</div>
   <div class="calendar">
       <div class="week tooltip"><div class="day">Monday</div><img  src="images/LifeStreamLogo.png"><div><a href="https://www.twitch.tv/lifestreamdffoo">The LifeStream</a></div><div class="tooltiptext">Join Raw Life, Bl'Artagnan, and Leafblade Mouse every Monday on twitch at 6:30PM CST as they talk about the ongoing events on the global side of the game. </div></div>
       <div class="week tooltip"><div class="day">Tuesday</div><img class="border-radius:25px;"  src="images/HCLogo.jpg"><a href="https://www.twitch.tv/thecrystalchronicles"></a><div><a href="https://www.twitch.tv/crossxiii">Historia Crux</a></div><div class="tooltiptext">Join CrossXII and Blindeye with a variaty of rotating guests as they update you on everything coming to global, with a special JP perspective! </div></div>
@@ -39,7 +42,6 @@
     <br/>All Materials are the Property of Koei Tecmo Games & Square Enix Co., Ltd. 
     <br/>All Rights Reserved</div></div>
   
-</div>
 </div>
 </body>
 <script>
@@ -67,4 +69,18 @@
       console.log("light mode")
     }
   }
+/* This is for the smooth transitions on the menu*/
+let anchorlinks = document.querySelectorAll('a[href^="#"]')
+
+for (let item of anchorlinks) { // relitere 
+  item.addEventListener('click', (e)=> {
+  let hashval = item.getAttribute('href')
+  let target = document.querySelector(hashval)
+  target.scrollIntoView({
+    behavior: 'smooth'
+  })
+  history.pushState(null, null, hashval)
+  e.preventDefault()
+})
+}
 </script>
