@@ -245,6 +245,11 @@
         "force": false
       },
       {
+        "name":"Fusoya",
+        "burst":false,
+        "force":true
+      },
+      {
         "name": "Fujin",
         "burst": false,
         "force": true
@@ -450,7 +455,7 @@
         "force": false
       },
       {
-        "name": "LunaFreya",
+        "name": "Lunafreya",
         "burst": true,
         "force": true
       },

@@ -26,10 +26,7 @@
 
 <div id="stage2">
   <div class="banned">Banned Units
-    <div class="banportraits">
-    <img src="styles/images/portraits/Jack Garland.webp" />
-    <img src="styles/images/portraits/Hope.webp" />
-    <img src="styles/images/portraits/Minwu.webp" />
+    <div class="banportraits" id="banned">
     </div>
   </div>
   <div class="units">
@@ -71,11 +68,13 @@
 </body>
 <script>
   // Model
+  
   let text = '{"units" : [' + '{"name":"Ace","burst":true,"force":false},' + '{"name":"Aerith","burst":false,"force":true},' + 
 		'{"name":"Agrias","burst":false,"force":false},' + '{"name":"Alisaie","burst":false,"force":false},' + '{"name":"Alphinaud","burst":false,"force":false},' +
 		'{"name":"Amidatelion","burst":false,"force":false},' + ' {"name":"Aphmau","burst":false,"force":false},' + ' {"name":"Aranea","burst":false,"force":true},'
 		+ ' {"name":"Arciela","burst":false,"force":false},' + ' {"name":"Ardyn","burst":true,"force":true},' + '{"name":"Ash","burst":false,"force":false}]}' ;
   const obj = JSON.parse(text)
+
 
   function loadPage()
 {
@@ -159,14 +158,12 @@ function updateUnits(value)
   {
     if(value == 1)
   {
-    console.log(selected.value)
     document.getElementById("ddUnit2").remove(selected.value)
   }
   }
 }
 function popUnits()
 {
-  console.log(obj.units.length)
   const unit1 = document.getElementById("ddUnit1")
   const unit2 = document.getElementById("ddUnit2")
   const unit3 = document.getElementById("ddUnit3")
@@ -192,12 +189,36 @@ function popUnits()
     unit3.add(option);
   }
   
-  let banned = document.getElementById("lblbanned");
-  banned.innerHTML = "wow";
 }
 
 function updateban(value)
 {
+  let bannedlist = document.getElementById('banned')
+  bannedlist.innerHTML = ''
+  let bannedUnits = []
+  let path = 'styles/images/portraits/'
+  /* This is where I should create an object and populate it with bans according to the stage */
+  if(value == 'Spiritus Ramuh')
+  {
+    bannedUnits.push("Ashe", "Setzer", "Kimahri", "Laguna","Agrias","Rem")
+  }
+  else if(value == "Sice Lost Chapter")
+  {
+    bannedUnits.push("Ashe", "Lann & Reynn", "Eight", "Sice")
+  }
+  else if(value == "Strago Heretics")
+  {
+    bannedUnits.push("Ashe", "Y'shtola", "Amidatelion", "Strago")
+  }
+  for(let i = 0; i < bannedUnits.length; i++)
+  {
+    let newimg = document.createElement('img')
+    newimg.src = path + bannedUnits[i] + '.webp'
+    bannedlist.appendChild(newimg);
+  }
+  
+  
+  
   
 }
 
