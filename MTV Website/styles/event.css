@@ -50,6 +50,8 @@ select {
 }
 .banportraits img{
   width: 100px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 .unit
 {
