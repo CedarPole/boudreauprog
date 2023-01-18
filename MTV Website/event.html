@@ -9,48 +9,62 @@
   
 </head>
 <body onload="loadPage()">
-<div class="wrapper"><form id="myForm">
-  <div>MTV Submission Form!</div>
-  <div class="stage1">
-    <div>Please enter you're username and which stage you're submitting</div>
+<div class="wrapper">
+  <form id="myForm">
+  MTV Submission Form!
+    <div class="stage1">
+    Please enter you're username and which stage you're submitting
     <div>Username : <input name="Username" required="true" type="text" /></div>
-  <div>Event Name : 
-    <select name="Events" id="ddEvents" onchange="setUnits()">
-      <option>Select your Event</option>
-    </select>
-  </div>
-</div>
-<div id="stage2">
-  <div class="banned"><div>Banned Units</div>
-  <div class="banportraits">
-    <img src="images/portraits/Jack Garland.webp" />
-    <img src="images/portraits/Hope.webp" />
-    <img src="images/portraits/Minwu.webp" />
-  <div class="units">
-    <div class="unit unit1">
-      <div>Unit 1 : <select onchange="updateUnits(1)" name="Unit 1" id="ddUnit1"><option>Select Your Unit</option></select>
-        Call <select name="Call 1" id="ddCall1"><option>Select Your Call</option></select>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;Event : 
+        <select name="Events" id="ddEvents" onchange="setUnits()">
+          <option>Select your Event</option>
+        </select>
       </div>
-      <div>BT Used? <input name="BT 1" type="checkbox" /> FR Used? <input name="FR 1" type="checkbox"></div>
     </div>
-    <div class="unit unit2">
-      <div>Unit 2 : <select onchange="updateUnits(2)" name="Unit 2" id="ddUnit2"><option>Select Your Unit</option></select>
-        Call <select name="Call 2" id="ddCall2"><option>Select Your Call</option></select>
-      </div>
-      <div>BT Used? <input type="checkbox" name="BT 2" /> FR Used? <input name="FR 2" type="checkbox"></div>
-    </div>
-    <div class="unit unit3">
-      <div>Unit 3 : <select onchange="updateUnits(3)" name="Unit 3" id="ddUnit3"><option>Select Your Unit</option></select>
-        Call <select name="Call 3" id="ddCall3"><option>Select Your Call</option></select>
-      </div>
-      
-      <div>BT Used <input type="checkbox" name="BT 3" /> FR Used? <input name="FR 3" type="checkbox"></div>
-    </div>
-  </div>
 
-  <div>Turn Count <input name="Turn Count" type="text" /></div>
+
+
+<div id="stage2">
+  <div class="banned">Banned Units
+    <div class="banportraits">
+    <img src="styles/images/portraits/Jack Garland.webp" />
+    <img src="styles/images/portraits/Hope.webp" />
+    <img src="styles/images/portraits/Minwu.webp" />
+    </div>
+  </div>
+  <div class="units">
+    <fieldset class="unit">
+      <legend>Unit 1</legend>
+      <div>
+        <select onchange="updateUnits(1)" name="Unit 1" id="ddUnit1"><option>Select Your Unit</option></select>
+        <select name="Call 1" id="ddCall1"><option>Select Your Call</option></select>
+        <div>BT Used? <input name="BT 1" type="checkbox" /> FR Used? <input name="FR 1" type="checkbox"></div>
+      
+      </div>
+
+    </fieldset>
+    <fieldset class="unit">
+      <legend >Unit 2</legend>
+      <select onchange="updateUnits(2)" name="Unit 2" id="ddUnit2"><option>Select Your Unit</option></select>
+      <select name="Call 2" id="ddCall2"><option>Select Your Call</option></select>
+      <div>BT Used? <input type="checkbox" name="BT 2" /> FR Used? <input name="FR 2" type="checkbox"></div>
+    
+    </fieldset>
+    <fieldset class="unit">
+      <legend>Unit 3</legend>
+      <select onchange="updateUnits(3)" name="Unit 3" id="ddUnit3"><option>Select Your Unit</option></select>
+      <select name="Call 3" id="ddCall3"><option>Select Your Call</option></select>
+      <div>BT Used <input type="checkbox" name="BT 3" /> FR Used? <input name="FR 3" type="checkbox"></div>
+    
+    </fieldset>
+  </div>
+  <div class="turn">Turn Count <input name="Turn Count" type="text" /></div>
   <div>Video Link <input name="Video Link" type="text" /></div>
   <button onclick="SubForm()">Submit</button>
+</div>
+</div>
+
+  
 </div>
 </form>
 </div>

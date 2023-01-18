@@ -13,116 +13,11 @@ body{
   padding:0;
   font-size: 3em;
   text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;}
+}
 p{
-  font-size:0.6em;margin:0 px 15px 15px;
+  font-size:0.6em;
+  margin:0 px 15px 15px;
 }
-  
-.background{
-  background-color: var(--background);
-  opacity: 0.5;
-  float:right;
-}
-
-
-/* Header */
-#mtvLogo{
-  width: 100%;
-}
-.title
-{
-  background-color: var(--maincolor);
-  color:white;
-  padding:20px 0 20px 0;
-}
-.nav
-{
-  background-color: var(--maincolor);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  position: sticky;
-  top:0;
-  width: 100%;
-  padding:15px 0 15px 0;
-  z-index: 5;
-}
-.nav label
-{
-  margin:auto;
-}
-.nav a
-{
-  font-size: 0.5em;
-  text-decoration: none;
-  color:white;
-  vertical-align: middle;
-}
-.nav div:hover
-{
-  background:rgb(66, 105, 137);
-}
-
-/* This is the CSS for the slider*/
-
-.nav input{
-  color: var(--textcolor);
-  background-color: var(--maincolor);
-  border:none;
-  font-size: 3em;
-  height:0.2em;
-  width: 4.9em;
-  margin-top:0.8em;
-  margin-bottom:0.1em;
-
-  transition: ease-in 1s;
-  text-align: right;
-}
-.switch {
-  margin-top:2.5px;
-  position:relative;
-  width: 2.5em;
-  height: 1.2em;
-}
-
-.slider{
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left:0;
-  right:0;
-  bottom:0;
-  background-color: rgb(165,165,165);
-  transition: .4s;
-  border-radius: 2em;
-}
-
-.switch input{
-  display: none;
-}
-.slider::before{
-  position: absolute;
-  content: "";
-  height: 0.9em;
-  width: 0.9em;
-  left: 15px;
-  bottom:7px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-input:checked + .slider
-{
-  background-color: rgb(56,100,161);
-}
-input:checked + .slider::before
-{
-  transform: translateX(50px);
-}
-/* This is the end of the slider*/
-
 
 .participants
 {
@@ -135,16 +30,20 @@ input:checked + .slider::before
 }
 .participants img
 {
-  width: 250px;
-  border-radius: 150px;
+  width: 200px;
+  border-radius: 100px;
   margin-left:100px;
 }
 .slides
 {
   display:grid;
   grid-template-columns: repeat(2, 1fr);
-  font-size: 0.8em;
+  font-size: 0.5em;
   text-align: left;
+  margin-top:15px;
+}
+.sliders div{
+  margin-top:20px;
 }
 #mtvChallenge
 {
@@ -157,13 +56,7 @@ input:checked + .slider::before
   text-decoration: underline;
   font-style: italic;
 }
-.headers
-{
-  background-color:rgb(66, 105, 137);
-  font-size: 1.2em;
-  color:white;
-  padding:10px;
-}
+
 .btnsubmit
 {
   font-size: 0.7em;
@@ -195,6 +88,7 @@ input:checked + .slider::before
 {
   display:grid;
   grid-template-columns: repeat(2, 1fr);
+  border-bottom:1px solid rgb(165, 238, 252);
 
 }
 .calendar a{
@@ -213,7 +107,7 @@ input:checked + .slider::before
 }
 .week:nth-of-type(1) ,.week:nth-of-type(4)
 {
-  background-color: gray;
+  background-color: rgb(165, 238, 252);
 }
 .week a{
   position: absolute;
@@ -240,37 +134,36 @@ input:checked + .slider::before
 {
   margin-top:5px;
 }
-
-@media only screen and (min-width: 1000px) {
-body{
-  font-size: 2em;
-}
-.wrapper
-{
-  margin:50px;
-}
-.title
-{
-  font-size: 2em;
-}
-.nav
-{
-  height: 30px;
-}
-.slider::before{
-left:10px;
-bottom:4px;
-}
-input:checked + .slider::before
-{
-  transform: translateX(35px);
-}
-
+@media(max-width: 500px){
+  p{
+    margin:10px 20px 10px 20px;
+  }
 .participants
 {
-  font-size: 1.2em;
+  padding: 5px 0 5px 0;
 }
-
+.participants img{
+  width: 40px;
+  border-radius: 20px;
+}
+.slides div{
+  margin:0;
+}
+#mtvChallenge
+{
+  margin-left:10px;
+  margin-right:10px;
+}
+.btnsubmit
+{
+  width: 50px;
+  height: 25px;
+  font-size: 0.5em;
+}
+.Extra
+{
+  font-size:0.7em;
+}
 /* Tool Tip*/
 .tooltip {
   position: relative;
@@ -297,7 +190,26 @@ input:checked + .slider::before
     }
   .calendar
   {
-    
   grid-template-columns: repeat(4, 1fr);
+  z-index: -500;
+  }
+  .calendar img{
+    width: 50px;
+    margin-bottom: 5px;
+  }
+  .calendar a{
+    font-size: 0.8em;
+  }
+  .week:nth-of-type(1) ,.week:nth-of-type(4)
+{
+  background-color: var(--background);
+}
+  .week:nth-of-type(1) ,.week:nth-of-type(3)
+{
+  background-color: rgb(165, 238, 252);
+}
+  .contact
+  {
+    font-size: 0.4em;
   }
 }
