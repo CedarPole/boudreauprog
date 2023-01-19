@@ -8,7 +8,7 @@
   crossorigin="anonymous"></script>
   
 </head>
-<body onload="loadPage()">
+<body>
 <div class="wrapper">
   <form id="myForm">
   MTV Submission Form!
@@ -16,7 +16,7 @@
     Please enter you're username and which stage you're submitting
     <div>Username : <input name="Username" required="true" type="text" /></div>
       <div>&nbsp;&nbsp;&nbsp;&nbsp;Event : 
-        <select name="Events" id="ddEvents" onchange="setUnits()">
+        <select name="Events" id="ddEvents" onchange="revealStage()">
           <option>Select your Event</option>
         </select>
       </div>
@@ -34,8 +34,8 @@
       <legend>Unit 1</legend>
       <div>
         <select onchange="updateUnits(1)" name="Unit 1" id="ddUnit1"><option>Select Your Unit</option></select>
-        <select name="Call 1" id="ddCall1"><option>Select Your Call</option></select>
-        <div>BT Used? <input name="BT 1" type="checkbox" /> FR Used? <input name="FR 1" type="checkbox"></div>
+        <select disabled="true" name="Call 1" id="ddCall1"><option>Select Your Call</option></select>
+        <div>BT Used? <input disabled="true" name="BT 1" type="checkbox" /> FR Used? <input disabled="true" name="FR 1" type="checkbox"></div>
       
       </div>
 
@@ -43,15 +43,15 @@
     <fieldset class="unit">
       <legend >Unit 2</legend>
       <select onchange="updateUnits(2)" name="Unit 2" id="ddUnit2"><option>Select Your Unit</option></select>
-      <select name="Call 2" id="ddCall2"><option>Select Your Call</option></select>
-      <div>BT Used? <input type="checkbox" name="BT 2" /> FR Used? <input name="FR 2" type="checkbox"></div>
+      <select name="Call 2" disabled="true" id="ddCall2"><option>Select Your Call</option></select>
+      <div>BT Used? <input disabled="true" type="checkbox" name="BT 2" /> FR Used? <input name="FR 2" disabled="true" type="checkbox"></div>
     
     </fieldset>
     <fieldset class="unit">
       <legend>Unit 3</legend>
       <select onchange="updateUnits(3)" name="Unit 3" id="ddUnit3"><option>Select Your Unit</option></select>
-      <select name="Call 3" id="ddCall3"><option>Select Your Call</option></select>
-      <div>BT Used <input type="checkbox" name="BT 3" /> FR Used? <input name="FR 3" type="checkbox"></div>
+      <select name="Call 3"  id="ddCall3"><option>Select Your Call</option></select>
+      <div>BT Used <input type="checkbox" disabled="true" name="BT 3" /> FR Used? <input name="FR 3" disabled="true" type="checkbox"></div>
     
     </fieldset>
   </div>
@@ -68,28 +68,48 @@
 </body>
 <script>
   // Model
-  
+
+  let events = []
+  events.push("Spiritus Ramuh", "Sice Lost Chapter","Strago Heretics", "DET 13", "Kuja's Intersecting Wills", "Jessie's Event")
+
+  let units = []
+  let used = []
+  let bannedMonth = []
+  bannedMonth.push("Minwu","Celes","Tifa","Hope","Machina","Enna Kros","Jack Garland") //This is the January bans to test
+
+  const bannedUnits = []
+  //The following is a testing unit variable. Until I can parse the JSON file into units
   let text = '{"units" : [' + '{"name":"Ace","burst":true,"force":false},' + '{"name":"Aerith","burst":false,"force":true},' + 
 		'{"name":"Agrias","burst":false,"force":false},' + '{"name":"Alisaie","burst":false,"force":false},' + '{"name":"Alphinaud","burst":false,"force":false},' +
 		'{"name":"Amidatelion","burst":false,"force":false},' + ' {"name":"Aphmau","burst":false,"force":false},' + ' {"name":"Aranea","burst":false,"force":true},'
-		+ ' {"name":"Arciela","burst":false,"force":false},' + ' {"name":"Ardyn","burst":true,"force":true},' + '{"name":"Ash","burst":false,"force":false}]}' ;
+		+ ' {"name":"Arciela","burst":false,"force":false},' + ' {"name":"Ardyn","burst":true,"force":true},' + '{"name":"Ashe","burst":true,"force":true}]}' ;
   const obj = JSON.parse(text)
 
-
-  function loadPage()
-{
   fetch('json/Units.json')
   .then((response) => response.json())
   .then((unitlist) => console.log(unitlist))
- fetch('json/events.json')
+  fetch('json/events.json')
   .then((response) => response.json())
   .then((eventlist) => console.log(eventlist))
   
-  setEvents()
 
+
+
+
+// View
+setEvents()
+function setEvents() // All Done
+{
+  const ddevent = document.getElementById("ddEvents");
+  for(let i = 0; i < events.length; i++)
+  {
+    let option = document.createElement('option')
+    option.text = events[i]
+    ddevent.add(option)
+  }
 }
 // This is the form to submit to google docs
-function SubForm () // This works
+function SubForm () // All Done
 {
 			$.ajax({
 				url:"https://api.apispreadsheets.com/data/mwoVfMzsyT9PeR7M/",
@@ -102,46 +122,15 @@ function SubForm () // This works
 					alert("There was an error :(")
 				}
 			});
-		}
-
-function setEvents()
-{
-  
-  const d = new Date();
-  let month = d.getMonth();
-  const events = document.getElementById("ddEvents");
-  let option = document.createElement("option");
-  let option2 = document.createElement("option");
-  let option3 = document.createElement("option");
-  let option4 = document.createElement("option");
-  let option5 = document.createElement("option");
-  let option6 = document.createElement("option");
-  if(month == 0) 
-  {
-    option.text = "Spiritus Ramuh";
-    option2.text = "Sice Lost Chapter";
-    option3.text = "Strago Heretics";
-    option4.text = "DET 13";
-    option5.text = "Kuja Interscting Wills";
-    option6.text = "Jessie's Event";
-  }
-  
-  events.add(option)
-  events.add(option2);
-  events.add(option3);
-  events.add(option4);
-  events.add(option5);
-  events.add(option6);
 }
-function setUnits() //All done
+function revealStage() //All done
 {
   const value = document.getElementById("ddEvents").value
-  const unit = document.getElementById("stage2")
+  const stage2 = document.getElementById("stage2")
   if(value != "Select your Event")
   {
-    unit.style.visibility = "visible";
+    stage2.style.visibility = "visible";
     updateban(value);
-    
     popUnits();
   }
   else
@@ -149,54 +138,13 @@ function setUnits() //All done
     unit.style.visibility = "hidden";
   }
 }
-function updateUnits(value)
-{
-  
-  let selected = document.getElementById("ddUnit" + value)
-
-  if(selected.value != "Select Your Unit")
-  {
-    if(value == 1)
-  {
-    document.getElementById("ddUnit2").remove(selected.value)
-  }
-  }
-}
-function popUnits()
-{
-  const unit1 = document.getElementById("ddUnit1")
-  const unit2 = document.getElementById("ddUnit2")
-  const unit3 = document.getElementById("ddUnit3")
-  for(let i = 0; i < obj.units.length; i++)
-  {
-    
-    let option = document.createElement("option");
-    option.text = obj.units[i].name;
-    unit1.add(option);
-  }
-  for(let i = 0; i < obj.units.length; i++)
-  {
-    
-    let option = document.createElement("option");
-    option.text = obj.units[i].name;
-    unit2.add(option);
-  }
-  for(let i = 0; i < obj.units.length; i++)
-  {
-    
-    let option = document.createElement("option");
-    option.text = obj.units[i].name;
-    unit3.add(option);
-  }
-  
-}
 
 function updateban(value)
 {
   let bannedlist = document.getElementById('banned')
   bannedlist.innerHTML = ''
-  let bannedUnits = []
-  let path = 'styles/images/portraits/'
+  let path = 'styles/images/portraits/PNG/'
+  bannedUnits.length = 0
   /* This is where I should create an object and populate it with bans according to the stage */
   if(value == 'Spiritus Ramuh')
   {
@@ -210,11 +158,42 @@ function updateban(value)
   {
     bannedUnits.push("Ashe", "Y'shtola", "Amidatelion", "Strago")
   }
-  for(let i = 0; i < bannedUnits.length; i++)
+  else if(value == "DET 13")
+  {
+    bannedUnits.push("Cecil (DK)", "Leon", "Quistis", "Cloud","Auron","Cinque")
+  }
+  else if(value == "Kuja's Intersecting Wills")
+  {
+    bannedUnits.push("Cecil (DK)", "Kuja", "Lion", "Deuce")
+  }
+  else if(value == "Jessie's Event")
+  {
+    bannedUnits.push("Cecil (DK)", "Jessie", "Minwu", "Barret") // Replaced Snow with Minwu for testing purposes
+  }
+  
+  for(let i = 0; i < bannedMonth.length; i++)
   {
     let newimg = document.createElement('img')
-    newimg.src = path + bannedUnits[i] + '.webp'
+    newimg.src = path + bannedMonth[i] + '.png'
     bannedlist.appendChild(newimg);
+  }
+  var br = document.createElement("br");
+  bannedlist.appendChild(br)
+  for(let i = 0; i < bannedUnits.length; i++)
+  {
+    let added = false
+    for(let y = 0; y < bannedMonth.length; y++)
+    {
+      if(bannedMonth[y] != bannedUnits[i] && added == false)
+      {
+        //Duplicates still show up here
+        let newimg = document.createElement('img')
+        newimg.src = path + bannedUnits[i] + '.png'
+        bannedlist.appendChild(newimg);
+        added = true
+      }
+    }
+    
   }
   
   
@@ -222,5 +201,48 @@ function updateban(value)
   
 }
 
-	
+function popUnits()
+{
+  document.getElementById("ddUnit1").innerHTML = '<option>Select Your Unit</option>'
+  document.getElementById("ddUnit2").innerHTML = '<option>Select Your Unit</option>'
+  document.getElementById("ddUnit3").innerHTML = '<option>Select Your Unit</option>'
+  document.getElementById("ddCall1").innerHTML = '<option>Select Your Call</option>'
+  document.getElementById("ddCall2").innerHTML = '<option>Select Your Call</option>'
+  document.getElementById("ddCall3").innerHTML = '<option>Select Your Call</option>'
+  let banned = bannedUnits.concat(bannedMonth)
+  for(let i = 0; i < obj.units.length; i++)
+  {
+    let added = false
+    for(let x = 0; x < banned.length; x++)
+    {
+      if(obj.units[i].name != banned[x] && added == false)
+      {
+        added = true
+        poplists(obj.units[i].name)
+      }
+    }
+  }
+
+
+  
+
+  
+  
+}
+
+function poplists(unit)
+{
+  
+
+  let selectelements = [document.getElementById("ddUnit1"),document.getElementById("ddUnit2"),document.getElementById("ddUnit3"),document.getElementById("ddCall1"),document.getElementById("ddCall2"),document.getElementById("ddCall3")]
+
+  for(let i = 0;i < selectelements.length;i++)
+  {
+    let option = document.createElement('option')
+    option.text = unit
+    selectelements[i].add(option)
+  }
+  
+}
+
 </script>
